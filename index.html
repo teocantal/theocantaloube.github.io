@@ -1,9 +1,8 @@
-<!doctype html>
 <html>
   <head>
     <!-- Page setup -->
     <meta charset="utf-8">
-    <title>Your title here</title>
+    <title>Théo Cantaloube, Ph.D. student</title>
     <meta name="description" content="Théo Cantaloube personal website">
     <meta name="author" content="Théo Cantaloube">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
@@ -28,14 +27,15 @@
   <body>
 
     <header id="header">
-      <img src="logo.png">
-      <h1>Simple Website</h1>
+      <div class="cv-header">
+        <img src="logo.jpg" style="width: 90px;">
+        <h1 style="font-size: 300%;">Théo Cantaloube, Ph.D. student</h1>
+      </div>
       
       <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
       <ul class="main-menu">
         <li><a href="#whoami">whoami</a></li>
         <li><a href="#papers">papers</a></li>
-        <li><a href="#contact">contact</a></li>
       </ul>                 
     </header>
    
@@ -44,32 +44,245 @@
         <div id="content"> 
           
           <div id="whoami" class="content-region hide">
-            <h2>Home</h2>
+            <h2>About me</h2>
+
             <p>
-              My name is Théo Cantaloube, I am a french PhD student working at INSA Lyon on the subject <a href="https://theses.fr/s424164">"Optimization of arithmetic parameters for the computational frugality"</a>.
+              My name is <strong>Théo Cantaloube</strong>. I am a french Ph.D. student in Computer Science at INSA Lyon, working on 
+              <a href="https://theses.fr/s424164">
+                Optimization of arithmetic parameters for computational frugality
+              </a>.
+            </p>
+
+            <section class="cv-section">
+              <h3>Formation</h3>
+              <ul>
+                <li>
+                  <div class="cv-item">
+                    <div class="cv-header">
+                      <strong>Ph.D. - <a href="https://www.citi-lab.fr/">
+                        CITI laboratory
+                      </a> in
+                      <a href="https://www.insa-lyon.fr/">
+                       INSA Lyon
+                      </a> (France)
+                      </strong>October 2025 → Dececember 2028
+                    </div>
+                    <div class="cv-content">
+                      Research on arithmetic optimization for computational frugality (<a href="https://team.inria.fr/emeraude/">
+                        Émeraude Team
+                      </a>)
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="cv-item">
+                    <div class="cv-header">
+                      <a href="https://ensimag.grenoble-inp.fr/">
+                        <strong>Graduate School of Engineering in Applied Mathematics and<br>Computer Sciences of Grenoble (France) (ENSIMAG)</strong>
+                      </a>
+                      September 2022 → June 2025
+                    </div>
+                    <div class="cv-content">
+                      Double Master's Degree:<br>
+                      <ul class="cv-list">
+                        <li>MMIS (Mathematics, Modeling, Imaging, Simulation)</li>
+                        <li>ORCO (Operational Research and Combinatorial Optimization)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="cv-item">
+                    <div class="cv-header">
+                      <a href="https://fermat.mon-ent-occitanie.fr/classes-preparatoires-aux-grandes-ecoles/filiere-scientifique/mp2i-mpsi-pcsi/">
+                        <strong>Intensive study course preparing for the competitive entrance<br>examinations to the Grandes Écoles (CPGE)</strong>
+                      </a>
+                      September 2020 → June 2022
+                    </div>
+                    <div class="cv-content">
+                      Pierre de Fermat High School, Toulouse (France)<br>
+                      Mathematics, Physics and Engineering Science section with Computer Science option
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="cv-item">
+                    <div class="cv-header">
+                      <strong>French Scientific Baccalaureate </strong>September 2017 → June 2020
+                    </div>
+                    <div class="cv-content">
+                      St-Sernin High School, Toulouse (France)<br>
+                      Scientific section with biology option
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+            <section class="cv-section">
+              <h3>Research Experiences</h3>
+              <ul>
+                <li>
+                  <div class="cv-item">
+                    <div class="cv-header">
+                      <strong>Research Internship - CITI Laboratory in INSA Lyon / Inria (France)</strong>March 2025 → July 2025
+                    </div>
+                    <div class="cv-content">
+                      <a href="files/pfe_mcm.pdf" target="_blank" rel="noopener noreferrer">Arithmetic optimization of logic circuits for embedded computing (Émeraude Team)</a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="cv-item">
+                    <div class="cv-header">
+                      <strong>Research Internship - Algorithm laboratory in Yuan Ze University, Taiwan</strong>June 2024 → August 2024
+                    </div>
+                    <div class="cv-content">
+                      <a href="files/Dual_box_covering_algorithms_for_fractal_graphs_dimension_computation.pdf" target="_blank" rel="noopener noreferrer">Comparative study of dual box-covering algorithms for fractal graph dimension computation</a>
+                    </div>
+                  </div>
+              </li>
+            </ul>
+            </section>
+
+            <!-- Projects -->
+            <section class="cv-section">
+              <h3>School projects carried out</h3>
+              <ul>
+                <li>
+                  <div class="cv-item">
+                    <div class="cv-header">
+                      <strong>Deca Compiler (subset of Java)</strong>2023 - 2024
+                    </div>
+                    <div class="cv-content">
+                      Team project: design and implementation of a compiler
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="cv-item">
+                    <div class="cv-header">
+                      <strong>JPEG Decoder in C</strong>2022
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="cv-item">
+                    <div class="cv-header">
+                      <strong>TIPE Project</strong>2021 - 2022
+                    </div>
+                    <div class="cv-content">
+                      <a href="files/Applications de l’analyse fractale à l’imagerie médicale.pdf" target="_blank" rel="noopener noreferrer">Applications of fractal analysis to medical imaging</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+            <!-- Skills -->
+            <section class="cv-section">
+              <h3>Skills</h3>
+              <ul class="cv-list">
+                <li><strong>Programming</strong>
+                <ul class="cv-list">
+                  <li><strong>Advanced:</strong> Java, C++, Python, LaTeX, Git</li>
+                  <li><strong>Intermediate:</strong> C</li>
+                  <li><strong>Basic:</strong> VHDL, R</li>
+                </ul>
+                <li><strong>Languages</strong>
+                <ul class="cv-list">
+                  <li><strong>French</strong>: C2 (native)</li>
+                  <li><strong>English</strong>: C1 (TOEIC B2)</li>
+                  <li><strong>Spanish</strong>: B2</li>
+                  <li><strong>Mandarin</strong>: A2</li>
+                </ul>
+              </ul>
+            </section>
+
+            <!-- Additional -->
+            <section class="cv-section">
+              <h3>Additional Experience</h3>
+              <ul>
+                <li>
+                  <div class="cv-item">
+                    <div class="cv-header">
+                      <strong>Work experience - Sports Center Facility Agent</strong>2023
+                    </div>
+                    <div class="cv-content">
+                      Maintenance of sports infrastructure and green spaces
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="cv-item">
+                    <div class="cv-header">
+                      <strong>Volunteer Work</strong>2013 - 2024
+                    </div>
+                    <div class="cv-content">
+                      Cultural festivals (<a href="https://www.gragnamomes.com/">
+                       Gragna'mômes
+                      </a>, <a href="https://www.gragnarock.fr/">
+                       Gragna'rock
+                      </a>): Artistic and creative activities, catering and logistics
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+            <!-- Interests -->
+            <section class="cv-section">
+              <h3>Interests</h3>
+              <ul class="cv-list">
+                <li><strong>Martial arts</strong>: Taekwondo (11 years), Jujitsu (1 year), Karate (1 year)</li>
+                <li>Art and drawing (10 years)</li>
+                <li>Reading and writing</li>
+              </ul>
+            </section>
+
+            <p>
+              My CV is also avaible in PDF format, in <a href="files/CV/CV EN Cantaloube Théo.pdf" target="_blank" rel="noopener noreferrer">english</a>, <a href="files/CV/CV FR Cantaloube Théo.pdf" target="_blank" rel="noopener noreferrer">french</a> or <a href="files/CV/CV SP Cantaloube Théo.pdf" target="_blank" rel="noopener noreferrer">spanish</a>.
             </p>
           </div>
           
           <div id="papers" class="content-region hide">
-            <h2>About</h2>
-            <p>
-              Sed tempus urna et pharetra pharetra massa massa ultricies. Porttitor rhoncus dolor purus non enim praesent. Id aliquet risus feugiat in ante metus dictum. 
-            </p>
+            <h2>Papers</h2>
+
+            <table class="papers-table">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Conference</th>
+                  <th>Co-authors</th>
+                  <th>Title</th>
+                  <th>Link</th>
+                  <th>Slides</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>2025</td>
+                  <td>CP Conference</td>
+                  <td>Xiao Peng, Christine Solnon, Anastasia Volkova</td>
+                  <td>A new Constraint Programming model for the Multiple Constant Multiplication</td>
+                  <td><a href="files/papers/ModRef2025_4_A_new_Constraint_Programming.pdf">PDF</a></td>
+                  <td><a href="files/slides/Diapo_MCM_Glasgow.pdf">Slides</a></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          
-          <div id="contact" class="content-region hide">
-            <h2>Contact</h2>
-            <p>
-              You can contact me on my institutional adress theo.cantaloube@free.fr. 
-            </p>
-          </div>
-          
         </div>
       </div>
     </div>
 
-    <footer>  
-      Footer region
+    <footer>
+      <p>© 2026 Théo Cantaloube — All rights reserved - 
+        <a href="mailto:tonmail@example.com">Email</a> |
+        <a href="https://www.linkedin.com/in/th%C3%A9o-cantaloube-b782a926b/">LinkedIn</a> |
+        <a href="https://scholar.google.com/">Google Scholar</a> |
+        <a href="https://github.com/teocantal/">GitHub</a>
+        - Website built with HTML/CSS — Hosted on GitHub Pages</p>
     </footer>
     
     <!-- Load additional JS scripts here -->

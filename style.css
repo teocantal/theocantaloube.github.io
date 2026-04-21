@@ -93,7 +93,7 @@ blockquote p:last-child {
 /* Full size background image */
 html, #container, .inner { background-color:transparent;}
 html {
-  background:url(background.jpg) center center no-repeat fixed;
+  background:url(background.jpg) center top no-repeat fixed;
   background-size:cover;
 }
 body {
@@ -115,7 +115,7 @@ ul.main-menu {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: center;
   list-style: none;
 }
 ul.main-menu li a {
@@ -140,4 +140,40 @@ ul.main-menu li a.active {
   display:block;
 }
 
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
 
+.papers-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.papers-table th,
+.papers-table td {
+  text-align: left;
+  padding: 8px 12px;
+  vertical-align: top;
+}
+
+/* Pas de bordures */
+.papers-table,
+.papers-table th,
+.papers-table td {
+  border: none;
+}
+
+/* Optionnel : style en-tête */
+.papers-table thead th {
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Optionnel : espacement lisible entre lignes */
+.papers-table tbody tr {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
