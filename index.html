@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
   <head>
     <!-- Page setup -->
     <meta charset="utf-8">
@@ -27,9 +27,6 @@
     <!-- Custom styles -->
     <link href="style.css" rel="stylesheet" type="text/css" />
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
-
     <!-- Want to add Bootstrap? -->
     <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
   </head>
@@ -37,328 +34,336 @@
   <body>
 
     <header id="header">
+      <div class="language-switch" role="group" aria-label="Language">
+        <button class="language-button" type="button" data-select-language="en" aria-pressed="true">🇬🇧 English</button>
+        <button class="language-button" type="button" data-select-language="fr" aria-pressed="false">🇫🇷 Français</button>
+      </div>
       <div class="cv-header">
         <img src="logo.jpg" style="width: 90px;">
-        <h1 style="font-size: 300%;">Théo Cantaloube, Ph.D. student</h1>
+        <h1 style="font-size: 300%;"><span data-lang="en">Théo Cantaloube, Ph.D. student</span><span data-lang="fr" hidden>Théo Cantaloube, doctorant</span></h1>
       </div>
       
       <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
       <ul class="main-menu">
-        <li><a href="#whoami">whoami</a></li>
-        <li><a href="#papers">papers</a></li>
-        <li><a href="#interests">interests</a></li>
+        <li><a href="#whoami"><span data-lang="en">whoami</span><span data-lang="fr" hidden>qui suis-je</span></a></li>
+        <li><a href="#papers"><span data-lang="en">papers</span><span data-lang="fr" hidden>publications</span></a></li>
+        <li><a href="#interests"><span data-lang="en">interests</span><span data-lang="fr" hidden>centres d'intérêt</span></a></li>
       </ul>                 
     </header>
    
     <div id="container">
       <div class="inner">
-        <div id="content"> 
-          
-          <div id="whoami" class="content-region hide">
-            <h2>About me</h2>
+        <div id="content" role="main" aria-live="polite">
+          <!-- SECTIONS_START -->
+<div id="whoami" class="content-region hide">
+  <h2><span data-lang="en">About me</span><span data-lang="fr">À propos de moi</span></h2>
 
-            <p>
-              My name is <strong>Théo Cantaloube</strong>. I am a french Ph.D. student in Computer Science in <a href="https://www.insa-lyon.fr/">INSA Lyon</a>, working on <a href="https://theses.fr/s424164"> Optimization of arithmetic parameters for computational frugality </a>.
-            </p>
+  <p>
+    <span data-lang="en">My name is</span><span data-lang="fr">Je m'appelle</span> <strong>Théo Cantaloube</strong><span data-lang="en">. I am a french Ph.D. student in Computer Science in</span><span data-lang="fr">. Je suis doctorant en informatique à</span> <a href="https://www.insa-lyon.fr/">INSA Lyon</a><span data-lang="en">, working on</span><span data-lang="fr">, et je travaille sur</span> <a href="https://theses.fr/s424164"> <span data-lang="en">Optimization of arithmetic operators for computational frugality</span><span data-lang="fr">l'optimisation d'opérateurs arithmétiques pour la frugalité computationnelle</span> </a>.
+  </p>
 
-            <h3>Education</h3>
-            <ul>
-              <li>
-                <div class="cv-header">
-                  <strong>Ph.D. - <a href="https://www.citi-lab.fr/">CITI laboratory</a>, National Institute of Applied Sciences,<br> Lyon (France)
-                  </strong>October 2025 → Dececember 2028
-                </div>
-                Optimisation of arithmetic operators for computationnal frugality (<a href="https://team.inria.fr/emeraude/">Émeraude Team</a>)
-              </li>
-              <li>
-                <div class="cv-header">
-                  <a href="https://ensimag.grenoble-inp.fr/">
-                    <strong>Graduate School of Engineering in Applied Mathematics and<br>Computer Sciences of Grenoble (France) (ENSIMAG)</strong>
-                  </a>September 2022 → June 2025
-                </div>
-                Double Master's Degree:<br>
-                <ul>
-                  <li>MMIS (Mathematics, Modeling, Imaging, Simulation)</li>
-                  <li>ORCO (Operational Research and Combinatorial Optimization)</li>
-                </ul>
-              </li>
-              <li>
-                <div class="cv-header">
-                  <a href="https://fermat.mon-ent-occitanie.fr/classes-preparatoires-aux-grandes-ecoles/filiere-scientifique/mp2i-mpsi-pcsi/"><strong>Intensive study course preparing for the competitive entrance<br>examinations to the Grandes Écoles (CPGE)</strong></a>September 2020 → June 2022
-                </div>
-                Pierre de Fermat High School, Toulouse (France)<br>
-                Mathematics, Physics and Engineering Science section with Computer Science option
-              </li>
-              <li>
-                <div class="cv-header">
-                  <strong>French Scientific Baccalaureate </strong>September 2017 → June 2020
-                </div>
-                St-Sernin High School, Toulouse (France)<br>
-                Scientific section with biology option
-              </li>
-            </ul>
+  <h3><span data-lang="en">Education</span><span data-lang="fr">Formation</span></h3>
+  <ul>
+    <li>
+      <div class="cv-header">
+        <strong><span data-lang="en">Ph.D. -</span><span data-lang="fr">Doctorat -</span> <a href="https://www.citi-lab.fr/"><span data-lang="en">CITI laboratory</span><span data-lang="fr">laboratoire CITI</span></a><span data-lang="en">, National Institute of Applied Sciences,</span><span data-lang="fr">, Institut national des sciences appliquées,</span><br> Lyon (France)
+        </strong><span data-lang="en">October 2025 → Dececember 2028</span><span data-lang="fr">Octobre 2025 → Décembre 2028</span>
+      </div>
+      <span data-lang="en">Optimisation of arithmetic operators for computationnal frugality (</span><span data-lang="fr">Optimisation d'opérateurs arithmétiques pour la frugalité computationnelle (</span><a href="https://team.inria.fr/emeraude/"><span data-lang="en">Emeraude Team</span><span data-lang="fr">équipe Émeraude</span></a>)
+    </li>
+    <li>
+      <div class="cv-header">
+        <a href="https://ensimag.grenoble-inp.fr/">
+          <strong><span data-lang="en">Graduate School of Engineering in Applied Mathematics and</span><span data-lang="fr">École Nationale Supérieure d'Informatiques et mathématiques</span><br><span data-lang="en">Computer Science of Grenoble (France) (ENSIMAG)</span><span data-lang="fr">appliquées de Grenoble (France) (ENSIMAG)</span></strong>
+        </a><span data-lang="en">September 2022 → June 2025</span><span data-lang="fr">Septembre 2022 → Juin 2025</span>
+      </div>
+      <span data-lang="en">Double Master's Degree:</span><span data-lang="fr">Double diplôme de Master :</span><br>
+      <ul>
+        <li><span data-lang="en">MMIS (Mathematics, Modeling, Imaging, Simulation)</span><span data-lang="fr">MMIS (Mathématiques, Modélisation, Imagerie, Simulation)</span></li>
+        <li><span data-lang="en">ORCO (Operational Research, Combinatorics and Optimization)</span><span data-lang="fr">ORCO (Recherche Opérationnelle, Combinatoire et Optimisation)</span></li>
+      </ul>
+    </li>
+    <li>
+      <div class="cv-header">
+        <a href="https://fermat.mon-ent-occitanie.fr/classes-preparatoires-aux-grandes-ecoles/filiere-scientifique/mp2i-mpsi-pcsi/"><strong><span data-lang="en">Intensive study Course Preparing for the competitive entrance</span><span data-lang="fr">Classe Préparatoire aux concours d'entrée</span><br><span data-lang="en">examinations to the Grandes Écoles (CPGE)</span><span data-lang="fr">des Grandes Ecoles (CPGE)</span></strong></a><span data-lang="en">September 2020 → June 2022</span><span data-lang="fr">Septembre 2020 → Juin 2022</span>
+      </div>
+      <span data-lang="en">Pierre de Fermat High School, Toulouse (France)</span><span data-lang="fr">Lycée Pierre de Fermat, Toulouse (France)</span><br>
+      <span data-lang="en">Mathematics, Physics and Engineering Science section with Computer Science option</span><span data-lang="fr">Filière mathématiques, physique et sciences de l'ingénieur, option informatique</span>
+    </li>
+    <li>
+      <div class="cv-header">
+        <strong><span data-lang="en">French Scientific Baccalaureate</span><span data-lang="fr">Baccalauréat scientifique français</span> </strong><span data-lang="en">September 2017 → June 2020</span><span data-lang="fr">Septembre 2017 → Juin 2020</span>
+      </div>
+      <span data-lang="en">St-Sernin High School, Toulouse (France)</span><span data-lang="fr">Lycée Saint-Sernin, Toulouse (France)</span><br>
+      <span data-lang="en">Scientific section with biology option</span><span data-lang="fr">Filière scientifique, option SVT</span>
+    </li>
+  </ul>
 
-            <h3>Research Experiences</h3>
-            <ul>
-              <li>
-                <div class="cv-header">
-                  <strong>Research Internship - CITI Laboratory in INSA Lyon / Inria (France)</strong>March 2025 → July 2025
-                </div>
-                <a href="files/pfe_mcm.pdf" target="_blank" rel="noopener noreferrer">Arithmetic optimization of logic circuits for embedded computing (Émeraude Team)</a>
-              </li>
-              <li>
-                <div class="cv-header">
-                  <strong>Research Internship - Algorithm laboratory in <br><a href="https://www.yzu.edu.tw/index_en.html/">Yuan Ze University</a> (Taiwan)</strong>June 2024 → August 2024
-                </div>
-                <a href="files/Dual_box_covering_algorithms_for_fractal_graphs_dimension_computation.pdf" target="_blank" rel="noopener noreferrer">Comparative study of dual box-covering algorithms for fractal graph dimension computation</a> (<a href="files/slides/slides - YZU charts.pdf" target="_blank" rel="noopener noreferrer">slides</a>)
-              </li>
-              <li>
-                <div class="cv-header">
-                  <strong>Introduction to Laboratory Research Course -<br><a href="https://www.inria.fr/fr/centre-inria-universite-grenoble-alpes/">Inria Montbonnot-Saint-Martin</a> (France)</strong>February 2024 → May 2024
-                </div>
-                <a href="files/Conception_automatique_d_arches_maçonnées_autoportantes_basées_sur_des_classes_d_équivalence.pdf" target="_blank" rel="noopener noreferrer">Automatic design of self-supporting masonry arches based on equivalence classes</a> (<a href="files/slides/IRL.pdf" target="_blank" rel="noopener noreferrer">slides</a>)
-              </li>
-            </ul>
+  <h3><span data-lang="en">Research Experiences</span><span data-lang="fr">Expériences de recherche</span></h3>
+  <ul>
+    <li>
+      <div class="cv-header">
+        <strong><span data-lang="en">Research Internship - CITI Laboratory in INSA Lyon / Inria (France)</span><span data-lang="fr">Stage de recherche - laboratoire CITI à l'INSA Lyon / Inria (France)</span></strong><span data-lang="en">March 2025 → July 2025</span><span data-lang="fr">Mars 2025 → Juillet 2025</span>
+      </div>
+      <a href="files/pfe_mcm.pdf" target="_blank" rel="noopener noreferrer"><span data-lang="en">Arithmetic optimization of logic circuits for embedded computing (Emeraude Team)</span><span data-lang="fr">Optimisation arithmétique de circuits logiques pour le calcul embarqué (équipe Emeraude)</span></a>
+    </li>
+    <li>
+      <div class="cv-header">
+        <strong><span data-lang="en">Research Internship - Algorithm laboratory in</span><span data-lang="fr">Stage de recherche - laboratoire d'algorithmique de</span> <br><a href="https://www.yzu.edu.tw/index_en.html/">Yuan Ze University</a> (Taiwan)</strong><span data-lang="en">June 2024 → August 2024</span><span data-lang="fr">Juin 2024 → Août 2024</span>
+      </div>
+      <a href="files/Dual_box_covering_algorithms_for_fractal_graphs_dimension_computation.pdf" target="_blank" rel="noopener noreferrer"><span data-lang="en">Comparative study of dual box-covering algorithms for fractal graph dimension computation</span><span data-lang="fr">Étude comparative d'algorithmes duaux de box-counting pour le calcul de dimension fractale de graphes</span></a> (<a href="files/slides/slides - YZU charts.pdf" target="_blank" rel="noopener noreferrer"><span data-lang="en">slides</span><span data-lang="fr">diapositives</span></a>)
+    </li>
+    <li>
+      <div class="cv-header">
+        <strong><span data-lang="en">Introduction to Laboratory Research Course -</span><span data-lang="fr">Initiation à la recherche en laboratoire -</span><br><a href="https://www.inria.fr/fr/centre-inria-universite-grenoble-alpes/">Inria Montbonnot-Saint-Martin</a> (France)</strong><span data-lang="en">February 2024 → May 2024</span><span data-lang="fr">Février 2024 → Mai 2024</span>
+      </div>
+      <a href="files/Conception_automatique_d_arches_maçonnées_autoportantes_basées_sur_des_classes_d_équivalence.pdf" target="_blank" rel="noopener noreferrer"><span data-lang="en">Automatic design of self-supporting masonry arches based on equivalence classes</span><span data-lang="fr">Conception automatique d'arches maçonnées autoportantes fondée sur des classes d'équivalence</span></a> (<a href="files/slides/IRL.pdf" target="_blank" rel="noopener noreferrer"><span data-lang="en">slides</span><span data-lang="fr">diapositives</span></a>)
+    </li>
+  </ul>
 
-            <h3>Teaching</h3>
-            <ul>
-              <li>
-                <div class="cv-header">
-                  <strong>C programming and algorithms lab sessions - 32h (INSA Lyon)<br> Advanced Algorithms for Artificial Intelligence and Graphs</strong>February 2025 → May 2025
-                </div>
-                
-              </li>
-            </ul>
+  <h3><span data-lang="en">Teaching</span><span data-lang="fr">Enseignement</span></h3>
+  <ul>
+    <li>
+      <div class="cv-header">
+        <strong><span data-lang="en">Mathematics Teaching assistant for 2nd-year undergraduate level - 40h (FIMI Departement INSA Lyon)</span><span data-lang="fr">Chargé de Travaux Dirigés de mathématiques pour 2èmes années de prépa intégrée - 40h (Département FIMI INSA Lyon)</span><br></strong><span data-lang="en">September 2025 → January 2025</span><span data-lang="fr">Septembre 2025 → Janvier 2025</span>
+      </div>
+      <span data-lang="en">Calculus and Linear Algebra</span><span data-lang="fr">Analyse et algèbre linéaire</span>
+    </li>
+    <li>
+      <div class="cv-header">
+        <strong><span data-lang="en">C programming and algorithms lab sessions - 32h (IF Departement INSA Lyon)</span><span data-lang="fr">Travaux Pratiques de programmation C et d'algorithmique</span><br><span data-lang="fr"> - 32h (Département IF INSA Lyon)</span><br></strong><span data-lang="en">February 2025 → May 2025</span><span data-lang="fr">Février 2025 → Mai 2025</span>
+      </div>
+      <span data-lang="en">Advanced Algorithms for Artificial Intelligence and Graphs</span><span data-lang="fr">Algorithmes Avancés pour l'Intelligence Artificielle et les Graphes</span>
+    </li>
+  </ul>
 
-            <h3>School projects carried out</h3>
-            <ul>
-              <li>
-                <div class="cv-header">
-                  <strong><a href="http://lambda-the-ultimate.org/deca/">Deca Compiler (subset of Java)</a></strong>2023 - 2024
-                </div>
-                Team project: design and implementation of a compiler
-              </li>
-              <li>
-                <div class="cv-header">
-                  <strong>JPEG Decoder in C</strong>2022
-                </div>
-              </li>
-              <li>
-                <div class="cv-header">
-                  <strong>TIPE Project</strong>2021 - 2022
-                </div>
-                <a href="files/Applications de l’analyse fractale à l’imagerie médicale.pdf" target="_blank" rel="noopener noreferrer">Applications of fractal analysis to medical imaging</a>
-              </li>
-            </ul>
+  <h3><span data-lang="en">School projects carried out</span><span data-lang="fr">Projets scolaires</span></h3>
+  <ul>
+    <li>
+      <div class="cv-header">
+        <strong><a href="http://lambda-the-ultimate.org/deca/"><span data-lang="en">Deca Compiler (subset of Java)</span><span data-lang="fr">Compilateur Deca (sous-ensemble de Java)</span></a></strong>2023 - 2024
+      </div>
+      <span data-lang="en">Team project: design and implementation of a compiler</span><span data-lang="fr">Projet en équipe : conception et implémentation d'un compilateur</span>
+    </li>
+    <li>
+      <div class="cv-header">
+        <strong><span data-lang="en">JPEG Decoder in C</span><span data-lang="fr">Décodeur JPEG en C</span></strong>2022
+      </div>
+    </li>
+    <li>
+      <div class="cv-header">
+        <strong><span data-lang="en">TIPE Project (Supervised Independent Projects)</span><span data-lang="fr">Projet TIPE (Travaux d'Initiative Personnelle Encadrés)</span></strong>2021 - 2022
+      </div>
+      <a href="files/Applications de l'analyse fractale à l'imagerie médicale.pdf" target="_blank" rel="noopener noreferrer"><span data-lang="en">Applications of fractal analysis to medical imaging</span><span data-lang="fr">Applications de l'analyse fractale à l'imagerie médicale</span></a>
+    </li>
+  </ul>
 
-            <h3>Skills</h3>
-            <ul>
-              <li><strong>Programming</strong>
+  <h3><span data-lang="en">Skills</span><span data-lang="fr">Compétences</span></h3>
+  <ul>
+    <li><strong><span data-lang="en">Programming</span><span data-lang="fr">Programmation</span></strong>
+    <ul>
+      <li><strong><span data-lang="en">Advanced:</span><span data-lang="fr">Avancé :</span></strong> Java, C++, Python, LaTeX, Git</li>
+      <li><strong><span data-lang="en">Intermediate:</span><span data-lang="fr">Intermédiaire :</span></strong> C</li>
+      <li><strong><span data-lang="en">Basic:</span><span data-lang="fr">Débutant :</span></strong> VHDL, R</li>
+    </ul>
+    <li><strong><span data-lang="en">Languages</span><span data-lang="fr">Langues</span></strong>
+    <ul>
+      <li><strong><span data-lang="en">French</span><span data-lang="fr">Français</span></strong><span data-lang="en">: C2 (native)</span><span data-lang="fr">: C2 (langue maternelle)</span></li>
+      <li><strong><span data-lang="en">English</span><span data-lang="fr">Anglais</span></strong>: C1 (TOEIC B2)</li>
+      <li><strong><span data-lang="en">Spanish</span><span data-lang="fr">Espagnol</span></strong>: B2</li>
+      <li><strong>Mandarin</strong>: A2</li>
+    </ul>
+  </ul>
+
+  <h3><span data-lang="en">Additional Experience</span><span data-lang="fr">Expériences complémentaires</span></h3>
+  <ul>
+    <li>
+      <div class="cv-header">
+        <strong><span data-lang="en">Work experience - Sports Center Facility Agent</span><span data-lang="fr">Expérience professionnelle - Agent d'entretien dans un centre sportif</span></strong>2023
+      </div>
+      <span data-lang="en">Maintenance of sports infrastructure and green spaces</span><span data-lang="fr">Entretien des installations sportives et des espaces verts</span>
+    </li>
+    <li>
+      <div class="cv-header">
+        <strong><a href="https://www.instagram.com/bdaensimag/"><span data-lang="en">ENSIMAG Arts Office</span><span data-lang="fr">ENSIMAG Bureau des Arts</span></a></strong>2022 - 2024
+      </div>
+      <span data-lang="en">Graphics and Newspaper Section - <a href="https://www.instagram.com/artcanes_la_liste/">Art'Canes List</a></span><span data-lang="fr">Section graphisme et journal - <a href="https://www.instagram.com/artcanes_la_liste/">Liste Art'Canes</a></span> 
+    </li>
+    <li>
+      <div class="cv-header">
+        <strong><span data-lang="en">Volunteer Work</span><span data-lang="fr">Bénévolat</span></strong>2013 - 2024
+      </div>
+      <span data-lang="en">Cultural festivals</span><span data-lang="fr">Festivals culturels</span> (<a href="https://www.gragnamomes.com/">Gragna'mômes</a>, <a href="https://www.gragnarock.fr/">Gragna'rock</a>): <span data-lang="en">Artistic and creative activities, catering and logistics</span><span data-lang="fr">Activités artistiques et créatives, restauration et logistique</span>
+    </li>
+  </ul>
+
+  <p>
+    <span data-lang="en">My CV is also avaible in PDF format, in</span><span data-lang="fr">Mon CV est également disponible au format PDF, en</span> <a href="files/CV/CV EN Cantaloube Théo.pdf" target="_blank" rel="noopener noreferrer"><span data-lang="en">english</span><span data-lang="fr">anglais</span></a>, <a href="files/CV/CV FR Cantaloube Théo.pdf" target="_blank" rel="noopener noreferrer"><span data-lang="en">french</span><span data-lang="fr">français</span></a> <span data-lang="en">or</span><span data-lang="fr">ou</span> <a href="files/CV/CV SP Cantaloube Théo.pdf" target="_blank" rel="noopener noreferrer"><span data-lang="en">spanish</span><span data-lang="fr">espagnol</span></a>.
+  </p>
+</div>
+<div id="papers" class="content-region hide">
+  <h2><span data-lang="en">Papers</span><span data-lang="fr">Publications</span></h2>
+
+  <p>
+    <span data-lang="en">Here is a selected list of publications.</span><span data-lang="fr">Voici une sélection de publications.</span>
+  </p>
+
+  <table class="papers-table">
+    <thead>
+      <tr>
+        <th><span data-lang="en">Year</span><span data-lang="fr">Année</span></th>
+        <th><span data-lang="en">Conference</span><span data-lang="fr">Conférence</span></th>
+        <th><span data-lang="en">Co-authors</span><span data-lang="fr">Co-auteurs</span></th>
+        <th><span data-lang="en">Title</span><span data-lang="fr">Titre</span></th>
+        <th><span data-lang="en">Link</span><span data-lang="fr">Lien</span></th>
+        <th><span data-lang="en">Slides</span><span data-lang="fr">Diapositives</span></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><span data-lang="en">July 2026</span><span data-lang="fr">Juillet 2026</span></td>
+        <td><span data-lang="en">CP Conference - Best student paper</span><span data-lang="fr">Conférence CP - meilleur article étudiant</span> </td>
+        <td>Xiao Peng, Christine Solnon, Anastasia Volkova</td>
+        <td>Solving the Multiple Constant Multiplication Problem with Constraint Programming </td>
+        <td><a href="files/papers/ModRef2025_4_A_new_Constraint_Programming.pdf">PDF</a></td>
+        <td><a href="files/slides/Diapo_MCM_Glasgow.pdf"><span data-lang="en">slides</span><span data-lang="fr">diapositives</span></a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    <span data-lang="en">For the complete list of publications, please visit my</span><span data-lang="fr">Pour consulter la liste complète de mes publications, rendez-vous sur mon</span> <a href="https://scholar.google.com/">Google Scholar</a>.
+  </p>
+
+  <h2><span data-lang="en">Past and upcoming events</span><span data-lang="fr">Événements passés et à venir</span></h2>
+    <table class="papers-table">
+      <thead>
+        <tr>
+          <th><span data-lang="en">Event</span><span data-lang="fr">Événement</span></th>
+          <th><span data-lang="en">Location</span><span data-lang="fr">Lieu</span></th>
+          <th>Date</th>
+          <th><span data-lang="en">Trivia</span><span data-lang="fr">Détail</span></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><a href="https://mlir-school.github.io/summer-2026/"><span data-lang="en">ACM Europe School on MLIR</span><span data-lang="fr">École européenne ACM sur MLIR</span></a></td>
+          <td><span data-lang="en">A Coruña (Spain)</span><span data-lang="fr">A Coruña (Espagne)</span></strong></td>
+          <td><span data-lang="en">August 10 → 14 2026</span><span data-lang="fr">10 → 14 août 2026</span></td>
+          <td></td>
+        </tr>
+        <tr>
+        <tr>
+          <td><a href="https://cp2026.a4cp.org/">32<sup><span data-lang="en">nd</span><span data-lang="fr">e</span></sup> <span data-lang="en">International Conference on Principles and Practice of CP</span><span data-lang="fr">Conférence internationale sur les principes et la pratique de la programmation par contraintes</span></a></td>
+          <td><span data-lang="en">Lisbon</span><span data-lang="fr">Lisbonne</span> (Portugal)</strong></td>
+          <td><span data-lang="en">July 18 → 23 2026</span><span data-lang="fr">18 → 23 juillet 2026</span></td>
+          <td><span data-lang="en">Poster presentation at</span><span data-lang="fr">Présentation d'un poster au</span> <a href="https://satcpdp26.github.io/">CP/SAT Doctoral Program</a> <span data-lang="en">/ Best student paper</span><span data-lang="fr">/ Meilleur article étudiant</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://sat-smt-ar-school.gitlab.io/www/2026/"><span data-lang="en">SAT/SMT/AR Summer School</span><span data-lang="fr">École d'été SAT/SMT/AR</span></a></td>
+          <td><span data-lang="en">Lisbon</span><span data-lang="fr">Lisbonne</span> (Portugal)</strong></td>
+          <td><span data-lang="en">July 13 → 17 2026</span><span data-lang="fr">13 → 17 juillet 2026</span></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="https://sites.uclouvain.be/jfpc26/"><span data-lang="en">21<sup>st</sup> Francophone Conference on Constraint Programming</span><span data-lang="fr">21<sup>ème</sup> Journées Francophones de la Programmation par Contraintes</span></a></td>
+          <td>Louvain-La-Neuve (Belgique)</strong></td>
+          <td><span data-lang="en">Mai 18 → 20 2026</span><span data-lang="fr">18 → 20 mai 2026</span></td>
+          <td><span data-lang="en">Oral presentation</span><span data-lang="fr">Présentation orale</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://roadef2026.sciencesconf.org/"><span data-lang="en">27<sup>th</sup> French Conference on Operations Research and Decision Support</span><span data-lang="fr">27<sup>ème</sup> congrès français de Recherche Opérationnelle et d'Aide à la Décision</span></a></td>
+          <td>Tours (France)</strong></td>
+          <td><span data-lang="en">Février 24 → 26 2026</span><span data-lang="fr">24 → 26 février 2026</span></td>
+          <td><a href="files/papers/R_sum__VLCM_ROADEF_2026.pdf"></a> <span data-lang="en">Oral presentation at the GT PPC / Finalist for the best Master thesis</span><span data-lang="fr">Présentation orale au GT PPC / Finaliste du prix du meilleur mémoire de master</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://raim2025.sciencesconf.org/"><span data-lang="en">16<sup>th</sup> Conference on Arithmetic in Mathematical Computer Science</span><span data-lang="fr">16<sup>ème</sup> Rencontres de l'Arithmétique en Informatique Mathématique</span></a></td>
+          <td>Lyon (France)</strong></td>
+          <td><span data-lang="en">Novembre 3 → 7 2025</span><span data-lang="fr">3 → 7 novembre 2025</span></td>
+          <td><span data-lang="en">Oral presentation</span><span data-lang="fr">Présentation orale</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://cp2025.a4cp.org/">31<sup><span data-lang="en">st</span><span data-lang="fr">e</span></sup> <span data-lang="en">International Conference on Principles and Practice of CP</span><span data-lang="fr">Conférence internationale sur les principes et la pratique de la programmation par contraintes</span></a></td>
+          <td><span data-lang="en">Glasgow (Scottland)</span><span data-lang="fr">Glasgow (Écosse)</span></strong></td>
+          <td><span data-lang="en">August 10 → 15 2025</span><span data-lang="fr">10 → 15 août 2025</span></td>
+          <td><a href="files/papers/ModRef2025_4_A_new_Constraint_Programming.pdf"><span data-lang="en">Oral resentation at</span><span data-lang="fr">Présentation orale au</span></a> <a href="https://modref.github.io/ModRef2025.html">ModRef Workshop</a></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<div id="interests" class="content-region hide">
+            <h2><span data-lang="en">Interests</span><span data-lang="fr">Centres d'intérêt</span></h2>
+
+              <p><span data-lang="en">Reading and writing are subjects that interest me a lot (</span><span data-lang="fr">La lecture et l'écriture sont des sujets qui m'intéressent beaucoup (</span><a href="https://www.babelio.com/monprofil.php?id_user=220836/">Babelio</a>, <a href="https://www.wattpad.com/user/tolitolu">Wattpad</a>).</p>
+
+              <h3><span data-lang="en">A few writing prices</span><span data-lang="fr">Quelques prix littéraires</span></h3>
               <ul>
-                <li><strong>Advanced:</strong> Java, C++, Python, LaTeX, Git</li>
-                <li><strong>Intermediate:</strong> C</li>
-                <li><strong>Basic:</strong> VHDL, R</li>
+                <li>
+                  <div class="cv-header">
+                    <strong><span data-lang="en">IPP Advanced Short Story Contest - Among top 15</span><span data-lang="fr">Concours de nouvelles de l'IPP - parmi les 15 premiers</span></strong>2025
+                  </div>
+                  <span data-lang="en">French contest organized by</span><span data-lang="fr">Concours français organisé par</span> <a href="https://www.ip-paris.fr">"Institut Polytechnique de Paris" (IPP)</a> <span data-lang="en">with theme:</span><span data-lang="fr">sur le thème :</span> <a href="https://www.ip-paris.fr/campus/centre-international-de-langue-et-culture-francaises/concours-de-nouvelles-avancees-2026"><span data-lang="en">Intelligences?</span><span data-lang="fr">Intelligences ?</span></a><br>
+                  <span data-lang="en"><a href="files/stories/Clever Hans.pdf" target="_blank" rel="noopener noreferrer">Clever Hans</a></span><span data-lang="fr"><a href="files/stories/Hans le Malin.pdf" target="_blank" rel="noopener noreferrer">Hans le malin</a></span>
+                </li>
+                <li>
+                  <div class="cv-header">
+                    <strong><span data-lang="en">CROUS Short Story Contest - Auvergne Rhône-Alpes top 3</span><span data-lang="fr">Concours de nouvelles du CROUS - 3e place en Auvergne-Rhône-Alpes</span></strong>2025
+                  </div>
+                  <span data-lang="en">French contest organized by the</span><span data-lang="fr">Concours français organisé par le</span> <a href="https://www.lescrous.fr/">CROUS</a> <span data-lang="en">with theme:</span><span data-lang="fr">sur le thème :</span> <a href="https://www.lescrous.fr/2025/11/concours-nouvelle-2025/">Courage</a><br>
+                  <span data-lang="en"><a href="files/stories/The Cosmic Office of Nighttime Doubts.pdf" target="_blank" rel="noopener noreferrer">The Cosmic Office of Nighttime Doubts</a></span><span data-lang="fr"><a href="files/stories/Le bureau cosmique des doutes nocturnes.pdf" target="_blank" rel="noopener noreferrer">Le bureau cosmique des doutes nocturnes</a></span>
+                </li>
+                <li>
+                  <div class="cv-header">
+                    <strong><span data-lang="en">IPP Advanced Short Story Contest - Among top 17</span><span data-lang="fr">Concours de nouvelles de l'IPP - parmi les 17 premiers</span></strong>2024
+                  </div>
+                  <span data-lang="en">French contest organized by IPP with theme:</span><span data-lang="fr">Concours français organisé par IPP sur le thème :</span> <a href="https://www.ip-paris.fr/campus/centre-international-de-langue-et-culture-francaises/concours-de-nouvelles-avancees-2024"><span data-lang="en">Should we take time seriously?</span><span data-lang="fr">Faut-il prendre le temps au sérieux ?</span></a><br>
+                  <span data-lang="en"><a href="files/stories/Apprendre à prendre son temps en-US.pdf" target="_blank" rel="noopener noreferrer">Learning to take your time</a></span><span data-lang="fr"><a href="files/stories/Apprendre à prendre son temps.pdf" target="_blank" rel="noopener noreferrer">Apprendre à prendre son temps</a></span>
+                </li>
+                <li>
+                  <div class="cv-header">
+                    <strong><span data-lang="en">ENSIMAG English Short Story Contest - top 2</span><span data-lang="fr">Concours de nouvelles en anglais de l'ENSIMAG - 2e place</span></strong>2024
+                  </div>
+                  <span data-lang="en">School contest organized by the ENSIMAG with theme: “The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom.” - Isaac Asimov</span><span data-lang="fr">Concours organisé par l'ENSIMAG sur le thème : « L'aspect le plus triste de notre époque est que la science accumule le savoir plus vite que la société n'accumule la sagesse. » - Isaac Asimov</span><br>
+                  <span data-lang="en"><a href="files/stories/Watch out!.pdf" target="_blank" rel="noopener noreferrer">Watch out!</a></span><span data-lang="fr"><a href="files/stories/Les montres, dehors .pdf" target="_blank" rel="noopener noreferrer">Les montres, dehors !</a></span>
+                </li>
+                <li>
+                  <div class="cv-header">
+                    <strong><span data-lang="en">DLF Plumier d'or - top 10</span><span data-lang="fr">Plumier d'or de la DLF - parmi les 10 premiers</span></strong>2014
+                  </div>
+                  <span data-lang="en">French language contest organized by the association</span><span data-lang="fr">Concours de langue française organisé par l'association</span> <a href="https://www.langue-francaise.org/">"Défense de la langue française"</a> <span data-lang="en">with the theme: Legends</span><span data-lang="fr">sur le thème des légendes</span>
+                </li>
               </ul>
-              <li><strong>Languages</strong>
+
+              <h3><span data-lang="en">Art and drawing</span><span data-lang="fr">Arts plastiques et dessin</span></h3>
               <ul>
-                <li><strong>French</strong>: C2 (native)</li>
-                <li><strong>English</strong>: C1 (TOEIC B2)</li>
-                <li><strong>Spanish</strong>: B2</li>
-                <li><strong>Mandarin</strong>: A2</li>
+                <li>
+                  <span data-lang="en">10 years in Plastic Arts club (acrylic, watercolor, pastel, mosaic, stained glass...)</span><span data-lang="fr">10 ans en club d'arts plastiques (acrylique, aquarelle, pastel, mosaïque, vitrail...)</span>
+                </li>
+                <li>
+                  <span data-lang="en">2 years as the graphic designer of the ENSIMAG Arts Office (graphics tablet)</span><span data-lang="fr">2 ans comme graphiste du Bureau des Arts de l'ENSIMAG (tablette graphique)</span>
+                </li>
+                <li>
+                  <span data-lang="en">Currently in anatomical nude drawing class</span><span data-lang="fr">Cours de dessin de nu anatomique en cours</span>
+                </li>
               </ul>
-            </ul>
 
-            <h3>Additional Experience</h3>
-            <ul>
-              <li>
-                <div class="cv-header">
-                  <strong>Work experience - Sports Center Facility Agent</strong>2023
-                </div>
-                Maintenance of sports infrastructure and green spaces
-              </li>
-              <li>
-                <div class="cv-header">
-                  <strong><a href="https://www.instagram.com/bdaensimag/">ENSIMAG Arts Office</a></strong>2022 - 2024
-                </div>
-                Graphics and Newspaper Section - <a href="https://www.instagram.com/artcanes_la_liste/">Art'Canes List</a>
-              </li>
-              <li>
-                <div class="cv-header">
-                  <strong>Volunteer Work</strong>2013 - 2024
-                </div>
-                Cultural festivals (<a href="https://www.gragnamomes.com/">Gragna'mômes</a>, <a href="https://www.gragnarock.fr/">Gragna'rock</a>): Artistic and creative activities, catering and logistics
-              </li>
-            </ul>
-
-            <p>
-              My CV is also avaible in PDF format, in <a href="files/CV/CV EN Cantaloube Théo.pdf" target="_blank" rel="noopener noreferrer">english</a>, <a href="files/CV/CV FR Cantaloube Théo.pdf" target="_blank" rel="noopener noreferrer">french</a> or <a href="files/CV/CV SP Cantaloube Théo.pdf" target="_blank" rel="noopener noreferrer">spanish</a>.
-            </p>
+              <h3><span data-lang="en">Martial arts</span><span data-lang="fr">Arts martiaux</span></h3>
+              <ul>
+                <li><span data-lang="en">11 years of Taekwondo - red belt with two black stripes (Keup 1)</span><span data-lang="fr">11 ans de taekwondo - ceinture rouge avec deux barrettes noires (keup 1)</span></li>
+                <li><span data-lang="en">1 year of Jujitsu</span><span data-lang="fr">1 an de jujitsu</span></li>
+                <li><span data-lang="en">1 year of Karate</span><span data-lang="fr">1 an de karaté</span></li>
+              </ul>
           </div>
-
-          <div id="interests" class="content-region hide">
-            <h2>Interests</h2>
-
-              <p>Reading and writing are subjects that interest me a lot (<a href="https://www.babelio.com/monprofil.php?id_user=220836/">Babelio</a>, <a href="https://www.wattpad.com/user/tolitolu">Wattpad</a>).</p>
-
-              <h3>A few writing prices</h3>
-              <ul>
-                <li>
-                  <div class="cv-header">
-                    <strong>IPP Advanced Short Story Contest - Among top 15</strong>2025
-                  </div>
-                  French contest organized by <a href="https://www.ip-paris.fr">"Institut Polytechnique de Paris" (IPP)</a> with theme: <a href="https://www.ip-paris.fr/campus/centre-international-de-langue-et-culture-francaises/concours-de-nouvelles-avancees-2026">Intelligences?</a><br>
-                  Short story in french: <a href="files/stories/Hans le Malin.pdf" target="_blank" rel="noopener noreferrer">Hans le malin</a> or in english: <a href="files/stories/Clever Hans.pdf" target="_blank" rel="noopener noreferrer">Clever Hans</a>
-                </li>
-                <li>
-                  <div class="cv-header">
-                    <strong>CROUS Short Story Contest - Auvergne Rhône-Alpes top 3</strong>2025
-                  </div>
-                  French contest organized by the <a href="https://www.lescrous.fr/">CROUS</a> with theme: <a href="https://www.lescrous.fr/2025/11/concours-nouvelle-2025/">Courage</a><br>
-                  Short story in french: <a href="files/stories/Le bureau cosmique des doutes nocturnes.pdf" target="_blank" rel="noopener noreferrer">Le bureau cosmique des doutes nocturnes</a> or in english: <a href="files/stories/The Cosmic Office of Nighttime Doubts.pdf" target="_blank" rel="noopener noreferrer">The Cosmic Office of Nighttime Doubts</a>
-                </li>
-                <li>
-                  <div class="cv-header">
-                    <strong>IPP Advanced Short Story Contest - Among top 17</strong>2024
-                  </div>
-                  French contest organized by IPP with theme: <a href="https://www.ip-paris.fr/campus/centre-international-de-langue-et-culture-francaises/concours-de-nouvelles-avancees-2024">Should we take time seriously?</a><br>
-                  Short story in french: <a href="files/stories/Apprendre à prendre son temps.pdf" target="_blank" rel="noopener noreferrer">Apprendre à prendre son temps</a> or in english: <a href="files/stories/Apprendre à prendre son temps en-US.pdf" target="_blank" rel="noopener noreferrer">Learning to take your time</a>
-                </li>
-                <li>
-                  <div class="cv-header">
-                    <strong>ENSIMAG English Short Story Contest - top 2</strong>2024
-                  </div>
-                  School contest organized by the ENSIMAG with theme: “The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom.” - Isaac Asimov<br>
-                  Short story in french: <a href="files/stories/Les montres, dehors .pdf" target="_blank" rel="noopener noreferrer">Les montres, dehors!</a> or in english: <a href="files/stories/Watch out!.pdf" target="_blank" rel="noopener noreferrer">Watch out!</a>
-                </li>
-                <li>
-                  <div class="cv-header">
-                    <strong>DLF Plumier d'or - top 10</strong>2014
-                  </div>
-                  French language contest organized by the association <a href="https://www.langue-francaise.org/">"Défense de la langue française"</a> with the theme: Legends
-                </li>
-              </ul>
-
-              <h3>Art and drawing</h3>
-              <ul>
-                <li>
-                  10 years in Plastic Arts club (acrylic, watercolor, pastel, mosaic, stained glass...)
-                </li>
-                <li>
-                  2 years as the graphic designer of the ENSIMAG Arts Office (graphics tablet)
-                </li>
-                <li>
-                  Currently in anatomical nude drawing class
-                </li>
-              </ul>
-
-              <h3>Martial arts</h3>
-              <ul>
-                <li>11 years of Taekwondo - red belt with two black stripes (Keup 1)</li>
-                <li>1 year of Jujitsu</li>
-                <li>1 year of Karate</li>
-              </ul>
-          </div>
-          
-          <div id="papers" class="content-region hide">
-            <h2>Papers</h2>
-
-            <p>
-              Here is a selected list of publications.
-            </p>
-
-            <table class="papers-table">
-              <thead>
-                <tr>
-                  <th>Year</th>
-                  <th>Conference</th>
-                  <th>Co-authors</th>
-                  <th>Title</th>
-                  <th>Link</th>
-                  <th>Slides</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td>July 2026</td>
-                  <td>CP Conference - Best student paper </td>
-                  <td>Xiao Peng, Christine Solnon, Anastasia Volkova</td>
-                  <td>Solving the Multiple Constant Multiplication Problem with Constraint Programming </td>
-                  <td><a href="files/papers/ModRef2025_4_A_new_Constraint_Programming.pdf">PDF</a></td>
-                  <td><a href="files/slides/Diapo_MCM_Glasgow.pdf">slides</a></td>
-                </tr>
-              </tbody>
-            </table>
-
-            <p>
-              For the complete list of publications, please visit my <a href="https://scholar.google.com/">Google Scholar</a>.
-            </p>
-
-            <h2>Past and upcoming events</h2>
-              <table class="papers-table">
-                <thead>
-                  <tr>
-                    <th>Event</th>
-                    <th>Location</th>
-                    <th>Date</th>
-                    <th>Trivia</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr>
-                    <td><a href="https://mlir-school.github.io/summer-2026/">ACM Europe School on MLIR</a></td>
-                    <td>A Coruña (Spain)</strong></td>
-                    <td>August 10 → 14 2026</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                  <tr>
-                    <td><a href="https://cp2026.a4cp.org/">32<sup>nd</sup> International Conference on Principles and Practice of CP</a></td>
-                    <td>Lisbon (Portugal)</strong></td>
-                    <td>July 18 → 23 2026</td>
-                    <td>Poster presentation at <a href="https://satcpdp26.github.io/">CP/SAT Doctoral Program</a> / Best student paper</td>
-                  </tr>
-                  <tr>
-                    <td><a href="https://sat-smt-ar-school.gitlab.io/www/2026/">SAT/SMT/AR Summer School</a></td>
-                    <td>Lisbon (Portugal)</strong></td>
-                    <td>July 13 → 17 2026</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><a href="https://sites.uclouvain.be/jfpc26/">21<sup>ème</sup> Journées Francophones de la Programmation par Contraintes</a></td>
-                    <td>Louvain-La-Neuve (Belgique)</strong></td>
-                    <td>Mai 18 → 20 2026</td>
-                    <td>Présentation orale</td>
-                  </tr>
-                  <tr>
-                    <td><a href="https://roadef2026.sciencesconf.org/">27<sup>ème</sup> congrès français de Recherche Opérationnelle et d'Aide à la Décision</a></td>
-                    <td>Tours (France)</strong></td>
-                    <td>Février 24 → 26 2026</td>
-                    <td><a href="files/papers/R_sum__VLCM_ROADEF_2026.pdf">Présentation</a> orale au GT PPC / Finaliste du meilleur mémoire de Master</td>
-                  </tr>
-                  <tr>
-                    <td><a href="https://raim2025.sciencesconf.org/">16<sup>ème</sup> Rencontres de l'Arithmétique en Informatique Mathématique</a></td>
-                    <td>Lyon (France)</strong></td>
-                    <td>Novembre 3 → 7 2025</td>
-                    <td>Présentation orale</td>
-                  </tr>
-                  <tr>
-                    <td><a href="https://cp2025.a4cp.org/">31<sup>st</sup> International Conference on Principles and Practice of CP</a></td>
-                    <td>Glasgow (Scottland)</strong></td>
-                    <td>August 10 → 15 2025</td>
-                    <td><a href="files/papers/ModRef2025_4_A_new_Constraint_Programming.pdf">Presentation</a> at <a href="https://modref.github.io/ModRef2025.html">ModRef Workshop</a></td>
-                  </tr>
-                </tbody>
-              </table>
-          </div>
-        </div>
+          <!-- SECTIONS_END -->
       </div>
     </div>
 
     <footer>
       <p>
-        © 2026 Théo Cantaloube — All rights reserved - <a href="mailto:theo.cantaloube@insa-lyon.fr">Email</a> | <a href="https://www.linkedin.com/in/th%C3%A9o-cantaloube-b782a926b/">LinkedIn</a> | <a href="https://scholar.google.com/">Google Scholar</a> | <a href="https://github.com/teocantal/">GitHub</a> - Website built with HTML/CSS — Hosted on GitHub Pages
+        <span data-lang="en">© 2026 Théo Cantaloube — All rights reserved - </span><span data-lang="fr" hidden>© 2026 Théo Cantaloube — Tous droits réservés - </span><a href="mailto:theo.cantaloube@insa-lyon.fr"><span data-lang="en">Email</span><span data-lang="fr" hidden>E-mail</span></a> | <a href="https://www.linkedin.com/in/th%C3%A9o-cantaloube-b782a926b/">LinkedIn</a> | <a href="https://scholar.google.com/">Google Scholar</a> | <a href="https://github.com/teocantal/">GitHub</a> - <span data-lang="en">Website built with HTML/CSS — Hosted on GitHub Pages</span><span data-lang="fr" hidden>Site créé en HTML/CSS — Hébergé sur GitHub Pages</span>
       </p>
     </footer>
     

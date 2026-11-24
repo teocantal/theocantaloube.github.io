@@ -13,6 +13,37 @@ body {
   font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #FFFFFF;
 }
+header#header {
+  position: relative;
+}
+.language-switch {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin: -8px 0 12px;
+}
+.language-button {
+  display: inline-block;
+  border: 1px solid rgba(255,255,255,.45);
+  border-radius: 3px;
+  padding: 5px 10px;
+  background: transparent;
+  color: #cfd2da;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+.language-button[aria-current="page"] {
+  border-color: #d19b38;
+  color: #fff;
+}
+[data-lang][hidden] {
+  display: none !important;
+}
+.language-button[aria-pressed="true"] {
+  border-color: #d19b38;
+  color: #fff;
+}
 
 /**
  * Links
